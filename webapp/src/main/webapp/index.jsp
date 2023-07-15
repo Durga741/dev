@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1>Welcome to the dogs park</h1>
+<h1>Welcome to the shihtuz park</h1>
 <h2>pool SCM</h2>
 </body>
 <body style="color:red;">
