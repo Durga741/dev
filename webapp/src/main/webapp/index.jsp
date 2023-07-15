@@ -1,14 +1,14 @@
 <html>
 <body>
-<h1>Welcome To Techno Experts Labs</h1>
+<h1>Welcome to the dogs park</h1>
 <h2>pool SCM</h2>
 </body>
 <body style="color:red;">
  <div class="container">
-    <label for="uname"><b>Username:    </b></label>
+    <label for="uname"><b>dogname:    </b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
 <br></br>
-    <label for="psw"><b>Password:     </b></label>
+    <label for="psw"><b>daysrequied:     </b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 <br></br>
    <button type="submit">Login</button>
