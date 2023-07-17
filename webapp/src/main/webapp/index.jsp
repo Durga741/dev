@@ -6,10 +6,10 @@
 <body style="color:pink;">
  <div class="container">
     <label for="uage"><b>age of harshitha:    </b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="enter your age" name="uname" required>
 <br></br>
     <label for="wish"><b>wish of harshitha:     </b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="age" placeholder="wishes" name="pwd" required>
 <br></br>
    <button type="submit">Login</button>
 <style>
