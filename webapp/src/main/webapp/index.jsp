@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1>happy birthday chichu </h1>
+<h1>happy birthday chichu harshitha </h1>
 <h2>make wishes</h2>
 </body>
 <body style="color:pink;">
