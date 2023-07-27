@@ -1,24 +1,32 @@
-node('master')
-{
-    stage('ContinuousDownload')
+pipeline{
+    agent any
+    stages
     {
-        git 'https://github.com/satish016/dev.git'
-    }
-    stage('ContinuousBuild')
-    {
-        sh 'mvn package'
-    }
-    stage('ContinuousDeployment')
-    {
-        deploy adapters: [tomcat9(credentialsId: '33045fd6-02cf-4e2b-8ec3-8e41bd030373', path: '', url: 'http://172.31.40.52:8080')], contextPath: 'qaenv', war: '**/*.war'
-    }
-    stage('ContinuousTesting')
-    {
-        git 'https://github.com/satish016/testing.git'
-        sh 'java -jar /home/ubuntu/.jenkins/workspace/testing/testing.jar'
-    }
-    stage('ContinuesDelivery')
-    {
-        deploy adapters: [tomcat9(credentialsId: '42e3b7b0-416d-41fd-bb46-231ae525da1f', path: '', url: 'http://172.31.45.212:8080')], contextPath: 'prodenv', war: '**/*.war'
-    }
-}
+        stage('continous download')
+        {
+            steps{git 'https://github.com/Durga741/dev.git'}
+        }
+
+         stage('continous build')
+        {
+            steps{sh 'mvn package'}
+        }
+         stage('continous delpoy')
+        {
+            steps{deploy adapters: [tomcat9(credentialsId: '4135eced-c942-4bbb-9eb7-4e60f2822659', path: '', url: 'http://172.31.10.37:8080')], contextPath: 'testapp', war: '**/*.war'}
+        }
+
+         stage('continous test')
+        {
+            steps{git 'https://github.com/Durga741/testing.git'
+            
+            sh 'java -jar /var/lib/jenkins/workspace/development/testing.jar'}
+        }
+         stage('continous devlivery')
+        {
+            steps{deploy adapters: [tomcat9(credentialsId: '4135eced-c942-4bbb-9eb7-4e60f2822659', path: '', url: 'http://172.31.5.15:8080')], contextPath: 'prodapp', war: '**/*.war'}
+        }
+       
+        }
+        }
+
